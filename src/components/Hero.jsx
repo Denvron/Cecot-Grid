@@ -14,7 +14,7 @@ export default function Hero({ onPlayLatest, isPlaying }) {
   React.useEffect(() => {
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % images.length);
-    }, 4000);
+    }, 6500);
     return () => clearInterval(id);
   }, []);
 
@@ -69,7 +69,7 @@ export default function Hero({ onPlayLatest, isPlaying }) {
                   key={i}
                   src={src}
                   alt="hero"
-                  className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${i === index ? 'opacity-100 scale-105' : 'opacity-0 scale-100'}`}
+                  className={`absolute inset-0 w-full h-full object-cover object-center transition-[opacity,transform,filter] duration-[3200ms] ease-[cubic-bezier(0.65,0,0.35,1)] will-change-[opacity,transform,filter] ${i === index ? 'opacity-100 scale-105 blur-0' : 'opacity-0 scale-100 blur-[2px]'}`}
                 />
               ))}
             </div>
