@@ -1,0 +1,6 @@
+name = "cecot-grid"
+pages_build_output_dir = "dist"  # Adjust if your build output is different
+
+[[r2_buckets]]
+binding = "MUSIC_BUCKET"  # This must match the variable name in your function code
+bucket_name = "cecot-grid"
