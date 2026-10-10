@@ -1,60 +1,70 @@
+import ForgetTheStress from '../assets/images/Forget the Stress.jpeg'
+import Deanna from '../assets/images/Deanna.PNG'
+import Feel from '../assets/images/Feel.PNG'
+import Island from '../assets/images/Island.PNG'
+
+import Image1 from '../assets/images/gallery/Image1.jpeg'
+import Image2 from '../assets/images/gallery/Image2.jpeg'
+import Image3 from '../assets/images/gallery/Image3.jpeg'
+import Image4 from '../assets/images/gallery/Image4.jpeg'
+import Image5 from '../assets/images/gallery/Image5.jpeg'
+import Image6 from '../assets/images/gallery/Image6.jpeg'
+import Image7 from '../assets/images/gallery/Image7.jpeg'
+// import Image8 from '../assets/images/gallery/Image8.jpeg'
+import Image9 from '../assets/images/gallery/Image9.jpeg'
+import Image10 from '../assets/images/gallery/Image10.jpeg'
+import Image11 from '../assets/images/gallery/Image11.jpeg'
+import Image12 from '../assets/images/gallery/Image12.jpeg'
+
+
+
+
 export const TRACKS = [
   {
     id: 1,
-    title: 'Sahara Pulse (Extended Mix)',
+    title: 'CECOT GRID - Forget the Stress',
     category: 'afro',
-    label: 'Keinemusik / Style Release',
-    duration: '6:42',
+    label: 'CECOT GRID Release',
+    duration: '2:20',
     bpm: 122,
     year: '2026',
-    cover: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop',
+    cover: ForgetTheStress,
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
   },
   {
     id: 2,
-    title: 'Echoes of the Grid',
+    title: 'Deanna',
     category: 'progressive',
-    label: 'Anjunadeep Concept',
+    label: 'CECOT GRID Release',
     duration: '7:15',
     bpm: 124,
     year: '2025',
-    cover: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop',
+    cover: Deanna,
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
   },
   {
     id: 3,
-    title: 'Live at Sunset Monolith, Ibiza',
+    title: 'Feel the Feeling',
     category: 'liveset',
     label: 'Cecot Grid Official Live',
     duration: '1:45:20',
     bpm: 123,
     year: '2026',
-    cover: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=800&auto=format&fit=crop',
+    cover: Feel,
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
   },
   {
     id: 4,
-    title: 'Organic Motion',
+    title: 'Island After Dark',
     category: 'afro',
-    label: 'All Day I Dream Vibes',
+    label: 'CECOT GRID Release',
     duration: '6:10',
     bpm: 121,
     year: '2025',
-    cover: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop',
+    cover: Island,
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
   },
-  {
-    id: 5,
-    title: 'Monolith Horizon',
-    category: 'progressive',
-    label: 'Afterlife Inspired Track',
-    duration: '8:02',
-    bpm: 126,
-    year: '2026',
-    cover: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3',
-  },
-];
+ ];
 
 export const TOUR_DATES = [
   { date: 'AUG 15, 2026', city: 'Ibiza, Spain', venue: 'Cova Santa', type: 'Afro House Sunset', status: 'Tickets Available' },
@@ -67,44 +77,86 @@ export const TOUR_DATES = [
 export const GALLERY_IMAGES = [
   {
     id: 1,
-    title: 'Sunset Set at Cova Santa',
+    title: '2026- Colombo Fashion Week - After Party',
     category: 'live',
-    location: 'Ibiza',
-    src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop',
+    location: 'Cinnamon Life - Colombo',
+    src: Image1,
   },
   {
     id: 2,
-    title: 'Analog Modular Synth Setup',
+    title: 'Fuga Colombo Back in 2010',
     category: 'studio',
-    location: 'Studio Session',
-    src: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1200&auto=format&fit=crop',
+    location: 'Fuga Colombo',
+    src: Image2,
   },
   {
     id: 3,
-    title: 'Drumshed Mainstage Energy',
+    title: '31st Night - Cinnamon Dhonveli',
     category: 'live',
-    location: 'London',
-    src: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop',
+    location: 'Maldives',
+    src: Image3,
   },
   {
     id: 4,
-    title: 'Backstage Pre-Show Prep',
+    title: 'Fire Beach Galleface Hotel',
     category: 'backstage',
-    location: 'Scorpios Mykonos',
-    src: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop',
+    location: 'Gallface - Colombo',
+    src: Image4,
   },
   {
     id: 5,
-    title: 'Crowd Vibration - Soho Garden',
+    title: 'Darley Road Pub - Throw back Thursday',
     category: 'live',
-    location: 'Dubai',
-    src: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop',
+    location: 'Colombo ',
+    src: Image5,
   },
   {
     id: 6,
-    title: 'Mastering Session & Step Sequencer',
+    title: 'Exclusive 6 Hours Extended Set - Progressive',
     category: 'studio',
-    location: 'Berlin Studio',
-    src: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop',
+    location: 'Down South - Sri Lanka',
+    src: Image6,
+  },
+   {
+    id: 7,
+    title: 'Cinnamon Hakura - White Party',
+    category: 'studio',
+    location: 'Maldives',
+    src: Image7,
+  },
+  //  {
+  //   id: 6,
+  //   title: 'Mastering Session & Step Sequencer',
+  //   category: 'studio',
+  //   location: 'Berlin Studio',
+  //   src: Image8,
+  // },
+   {
+    id: 8,
+    title: '2026- Colombo Fashion Week - After Party',
+    category: 'studio',
+    location: 'Cinnamon Life - Colombo',
+    src: Image9,
+  },
+   {
+    id: 9,
+    title: '2026- Colombo Fashion Week - After Party',
+    category: 'studio',
+    location: 'Cinnamon Life - Colombo',
+    src: Image10,
+  },
+   {
+    id: 10,
+    title: 'Furaveri Resort - Pool Party',
+    category: 'studio',
+    location: 'Maldives', 
+    src: Image11,
+  },
+   {
+    id: 11,
+    title: '2026- Colombo Fashion Week - After Party',
+    category: 'studio',
+    location: 'Cinnamon Life - Colombo',
+    src: Image12,
   },
 ];

@@ -19,7 +19,7 @@ export default function Gallery({ images }) {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-2">
+        {/* <div className="flex flex-wrap gap-2">
           {[
             { id: 'all', label: 'All Photos' },
             { id: 'live', label: 'Live Stages' },
@@ -38,7 +38,7 @@ export default function Gallery({ images }) {
               {tab.label}
             </button>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Masonry / Grid Layout */}
@@ -61,7 +61,7 @@ export default function Gallery({ images }) {
               <span className="text-xs text-[#f2a93b] font-bold tracking-wider uppercase flex items-center gap-1 mb-1">
                 <MapPin className="w-3 h-3" /> {img.location}
               </span>
-              <h3 className="font-bold text-lg text-white truncate">{img.title}</h3>
+              <h3 className="font-bold text-[16px] text-white truncate">{img.title}</h3>
             </div>
 
             <div className="absolute top-4 right-4 p-2 rounded-full bg-[#07080a]/60 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity">

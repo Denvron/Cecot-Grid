@@ -69,7 +69,7 @@ export default function Hero({ onPlayLatest, isPlaying }) {
                   key={i}
                   src={src}
                   alt="hero"
-                  className={`absolute inset-0 w-full h-full object-cover object-center transition-[opacity,transform,filter] duration-[3200ms] ease-[cubic-bezier(0.65,0,0.35,1)] will-change-[opacity,transform,filter] ${i === index ? 'opacity-100 scale-105 blur-0' : 'opacity-0 scale-100 blur-[2px]'}`}
+                  className={`absolute inset-0 w-full h-full object-cover object-center transition-[opacity,transform,filter] duration-[3200ms] ease-[cubic-bezier(0.65,0,0.35,1)] will-change-[opacity,transform,filter] ${i === index ? 'opacity-100 blur-0' : 'opacity-0 scale-100 blur-[2px]'}`}
                 />
               ))}
             </div>
