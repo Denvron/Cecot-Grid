@@ -1,4 +1,5 @@
 name = "cecot-grid"
+compatibility_date = "2026-10-10"
 pages_build_output_dir = "dist"  # Adjust if your build output is different
 
 [[r2_buckets]]
