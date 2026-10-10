@@ -29,7 +29,7 @@ export const TRACKS = [
     bpm: 122,
     year: '2026',
     cover: ForgetTheStress,
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    audioUrl: '/media/CECOT GRID - FORGET THE STRESS.mp4',
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ export const TRACKS = [
     bpm: 124,
     year: '2025',
     cover: Deanna,
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    audioUrl: '/media/DEANNA - CECOT GRID.mp4',
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ export const TRACKS = [
     bpm: 123,
     year: '2026',
     cover: Feel,
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+    audioUrl: '/media/FEEL THIS FEELING - CECOT GRID.mp4',
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ export const TRACKS = [
     bpm: 121,
     year: '2025',
     cover: Island,
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
+    audioUrl: '/media/CECOT GRID - ISLAND AFTER DARK.mp4',
   },
  ];
 
