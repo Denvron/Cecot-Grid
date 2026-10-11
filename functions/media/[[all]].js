@@ -35,36 +35,89 @@
 
 export async function onRequest(context) {
   const { request, env, params } = context;
-  
-  // Extract the file path from the wildcard route
   const pathArray = params.all;
   const key = Array.isArray(pathArray) ? pathArray.join('/') : pathArray;
 
   if (!key) {
-    return new Response("Not found", { status: 404 });
+    return new Response('Not found', { status: 404 });
+  }
+
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    return new Response('Method not allowed', {
+      status: 405,
+      headers: { Allow: 'GET, HEAD' },
+    });
   }
 
   try {
-    // Fetch the file from R2 using the binding name defined in wrangler.toml
-    const object = await env.MUSIC_BUCKET.get(key);
+    const metadata = await env.MUSIC_BUCKET.head(key);
 
-    if (!object) {
-      return new Response("Video not found", { status: 404 });
+    if (!metadata) {
+      return new Response('Media file not found', { status: 404 });
     }
 
     const headers = new Headers();
-    object.writeHttpMetadata(headers);
-    headers.set("etag", object.httpEtag);
-    
-    // Ensure proper video content type for MP4 streaming
-    if (key.endsWith('.mp4')) {
-      headers.set("Content-Type", "video/mp4");
+    metadata.writeHttpMetadata(headers);
+    headers.set('etag', metadata.httpEtag);
+    headers.set('Accept-Ranges', 'bytes');
+    headers.set('Content-Length', String(metadata.size));
+
+    if (key.toLowerCase().endsWith('.mp3')) {
+      headers.set('Content-Type', 'audio/mp3');
     }
 
-    return new Response(object.body, {
+    let status = 200;
+    let range;
+    const rangeHeader = request.headers.get('Range');
+    const rangeMatch = rangeHeader?.match(/^bytes=(\d*)-(\d*)$/);
+
+    if (rangeMatch) {
+      const [, startText, endText] = rangeMatch;
+      let offset;
+      let length;
+
+      if (!startText) {
+        const suffixLength = Number(endText);
+        if (!suffixLength) {
+          return new Response(null, {
+            status: 416,
+            headers: { 'Content-Range': `bytes */${metadata.size}` },
+          });
+        }
+        length = Math.min(suffixLength, metadata.size);
+        offset = metadata.size - length;
+      } else {
+        offset = Number(startText);
+        const end = endText ? Number(endText) : metadata.size - 1;
+        if (offset >= metadata.size || end < offset) {
+          return new Response(null, {
+            status: 416,
+            headers: { 'Content-Range': `bytes */${metadata.size}` },
+          });
+        }
+        length = Math.min(end, metadata.size - 1) - offset + 1;
+      }
+
+      range = { offset, length };
+      status = 206;
+      headers.set('Content-Range', `bytes ${offset}-${offset + length - 1}/${metadata.size}`);
+      headers.set('Content-Length', String(length));
+    }
+
+    const object = request.method === 'HEAD'
+      ? null
+      : await env.MUSIC_BUCKET.get(key, range ? { range } : undefined);
+
+    if (request.method === 'GET' && !object) {
+      return new Response('Media file not found', { status: 404 });
+    }
+
+    return new Response(object?.body ?? null, {
+      status,
       headers,
     });
   } catch (err) {
-    return new Response(`Error: ${err.message}`, { status: 500 });
+    console.error('Unable to serve media file:', err);
+    return new Response('Unable to serve media file', { status: 500 });
   }
 }

@@ -16,53 +16,61 @@ import Image10 from '../assets/images/gallery/Image10.jpeg'
 import Image11 from '../assets/images/gallery/Image11.jpeg'
 import Image12 from '../assets/images/gallery/Image12.jpeg'
 
+import DeannaAudio from '../assets/audio/DEANNA - CECOT GRID.mp3'
+import ForgetTheStressAudio from '../assets/audio/FORGET THE STRESS - CECOT GRID.mp3'
+import FeelAudio from '../assets/audio/FEEL THIS FEELING - CECOT GRID.mp3'
+import IslandAudio from '../assets/audio/CECOT GRID - ISLAND AFTER DARK.mp3'
+
 
 
 
 export const TRACKS = [
   {
     id: 1,
-    title: 'CECOT GRID - Forget the Stress',
+    title: 'CECOT GRID - Forget The Stress',
     category: 'afro',
     label: 'CECOT GRID Release',
     duration: '2:20',
     bpm: 122,
     year: '2026',
     cover: ForgetTheStress,
-    audioUrl: '/media/CECOT GRID - FORGET THE STRESS.mp4',
+    audioUrl: ForgetTheStressAudio,
+    // audioUrl: '/media/CECOT GRID - FORGET THE STRESS.mp4',
   },
   {
     id: 2,
     title: 'Deanna',
     category: 'progressive',
     label: 'CECOT GRID Release',
-    duration: '7:15',
+    duration: '2:47',
     bpm: 124,
     year: '2025',
     cover: Deanna,
-    audioUrl: '/media/DEANNA - CECOT GRID.mp4',
+    audioUrl: DeannaAudio,
   },
   {
     id: 3,
-    title: 'Feel the Feeling',
+    title: 'Feel This Feeling',
     category: 'liveset',
     label: 'Cecot Grid Official Live',
-    duration: '1:45:20',
+    duration: '02:43',
     bpm: 123,
     year: '2026',
     cover: Feel,
-    audioUrl: '/media/FEEL THIS FEELING - CECOT GRID.mp4',
+    audioUrl: FeelAudio,
+    // audioUrl: '/media/FEEL THIS FEELING - CECOT GRID.mp3',
   },
   {
     id: 4,
     title: 'Island After Dark',
     category: 'afro',
     label: 'CECOT GRID Release',
-    duration: '6:10',
+    duration: '1:24',
     bpm: 121,
     year: '2025',
     cover: Island,
-    audioUrl: '/media/CECOT GRID - ISLAND AFTER DARK.mp4',
+    audioUrl: IslandAudio,
+    // audioUrl: '/media/CECOT GRID - ISLAND AFTER DARK.mp3',
   },
  ];
 
