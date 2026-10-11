@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Download, Sliders, CheckCircle2 } from 'lucide-react';
+import { Download, Sliders, CheckCircle2, Phone, PinIcon, Mail } from 'lucide-react';
+import { BsWhatsapp } from 'react-icons/bs';
 
 export default function EpkBooking() {
   const [bookingSubmitted, setBookingSubmitted] = useState(false);
@@ -16,7 +17,7 @@ export default function EpkBooking() {
         {/* Bio & Press Assets */}
         <div>
           <span className="text-[#e06a3b] text-xs font-bold tracking-widest uppercase">PRESS KIT</span>
-          <h2 className="font-bold text-4xl text-white mt-1 mb-6">BIOGRAPHY & ASSETS</h2>
+          <h2 className="font-bold text-4xl text-white mt-1 mb-6">BIOGRAPHY & CONTACT</h2>
           <p className="text-slate-300 leading-relaxed mb-4">
             CECOT GRID is an internationally acclaimed DJ and music producer with over 25 years of professional experience behind the decks, delivering unforgettable musical journeys across clubs, luxury resorts, festivals and exclusive events.
           </p>
@@ -24,16 +25,37 @@ export default function EpkBooking() {
             Oiginally from Colombo, Sri Lanka and currently based between the Maldives and Sri Lanka, CECOT GRID has built a reputation for creating sophisticated, high-energy performances that connect with audiances from around the world.
           </p>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 rounded-xl bg-[#10131a] border border-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* <div className="p-4 rounded-xl bg-[#10131a] border border-white/5">
               <Download className="w-6 h-6 text-[#f2a93b] mb-2" />
               <h4 className="font-bold text-white text-sm">Press Kit (ZIP)</h4>
               <p className="text-xs text-slate-400">Hi-Res Photos & Logos</p>
-            </div>
+            </div> */}
             <div className="p-4 rounded-xl bg-[#10131a] border border-white/5">
+              {/* <h4 className="font-bold text-white text-sm mb-3">Contact</h4> */}
+              <div className='flex gap-3 mb-2'>
+                <Phone className="w-6 h-6 text-[#e06a3b] mb-2" />
+                <p className="text-sm text-slate-400 mb-2">+94 776 462 433</p>
+              </div>
+              <div className='flex gap-3'>
+                <BsWhatsapp className="w-6 h-6 text-[#e06a3b] mb-2" />
+                <p className="text-sm text-slate-400 mb-2">+94 776 462 433</p>
+              </div>
+            </div>
+            {/* <div className="p-4 rounded-xl bg-[#10131a] border border-white/5">
               <Sliders className="w-6 h-6 text-[#e06a3b] mb-2" />
               <h4 className="font-bold text-white text-sm">Tech Rider</h4>
               <p className="text-xs text-slate-400">CDJ-3000 & Mixer Setup</p>
+            </div> */}
+            <div className="p-4 rounded-xl bg-[#10131a] border border-white/5">
+              <div className='flex gap 3'>
+                <Mail className="w-6 h-6 text-[#e06a3b] mr-3 mb-2" />
+                <p className="text-[16px] text-slate-400">cecotgrid@gmail.com</p>
+              </div>
+              <div className='flex gap 3'>
+                <PinIcon className='w-6 h-6 text-[#e06a3b] mr-3'/>
+                <p className="text-[16px] text-slate-400 ">Colombo, Sri Lanka</p>
+              </div>
             </div>
           </div>
         </div>

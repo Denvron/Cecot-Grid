@@ -11,12 +11,40 @@ import WhatsappButton from './components/WhatsappButton';
 import { FaWhatsapp } from 'react-icons/fa';
 import Gallery from './components/Gallery';
 import { GALLERY_IMAGES } from './data/portfolioData';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentTrack, setCurrentTrack] = useState(TRACKS[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [currentView, setCurrentView] = useState('home'); // 'home' | 'privacy' | 'terms'
+
+  if (currentView === 'privacy') {
+    return (
+      <div className="bg-[#07080a]">
+        <PrivacyPolicy />
+        <Footer 
+          onOpenPrivacy={() => setCurrentView('privacy')} 
+          onOpenTerms={() => setCurrentView('terms')} 
+        />
+      </div>
+    );
+  }
+
+  if (currentView === 'terms') {
+    return (
+      <div className="bg-[#07080a]">
+        <TermsOfService />
+        <Footer 
+          onOpenPrivacy={() => setCurrentView('privacy')} 
+          onOpenTerms={() => setCurrentView('terms')} 
+        />
+      </div>
+    );
+  }
 
   const handleTrackToggle = (track) => {
     if (currentTrack?.id === track.id) {
@@ -66,7 +94,10 @@ export default function App() {
         <WhatsappButton />
       </div>
 
-      <Footer />
+      <Footer 
+        onOpenPrivacy={() => { setCurrentView('privacy'); window.scrollTo(0, 0); }} 
+        onOpenTerms={() => { setCurrentView('terms'); window.scrollTo(0, 0); }}
+      />
 
       
     </div>

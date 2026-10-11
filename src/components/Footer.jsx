@@ -13,7 +13,7 @@ import LogoNew from '../assets/images/Logo New.jpeg'
 
 
 
-const Footer = () => {
+const Footer = ({onOpenPrivacy, onOpenTerms}) => {
   return (
     <footer id="footer" className="bg-[#060B16] border-t border-slate-900 py-16 px-6 md:px-12 lg:px-24 text-left">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-xs text-slate-500 mb-12">
@@ -81,9 +81,23 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-400 mb-12">
         <p>© 2026 CECOT GRID. All rights reserved.</p>
-        <div className="flex space-x-6 mt-4 md:mt-0">
-          <span className="hover:text-slate-300 cursor-pointer">Privacy Policy</span>
-          <span className="hover:text-slate-300 cursor-pointer">Terms of Service</span>
+        <div className="flex space-x-6 mt-3 md:mt-0 mb-2 md:mb-0">
+          {/* <span className="hover:text-slate-300 cursor-pointer">Privacy Policy</span>
+          <span className="hover:text-slate-300 cursor-pointer">Terms of Service</span> */}
+
+          <button 
+            onClick={onOpenPrivacy} 
+            className="hover:text-[#f2a93b] transition-colors uppercase"
+          >
+            Privacy Policy
+          </button>
+          <span>•</span>
+          <button 
+            onClick={onOpenTerms} 
+            className="hover:text-[#f2a93b] transition-colors uppercase"
+          >
+            Terms of Service
+          </button>
         </div>
         <div>designed & developed by - <a href="https://denvron.vercel.app/" className="hover:text-slate-300 cursor-pointer">denvron</a></div>
       </div>
