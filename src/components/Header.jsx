@@ -20,7 +20,7 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
           <a href="#sounds" className="hover:text-[#f2a93b] transition-colors">DISCOGRAPHY</a>
           {/* <a href="#tour" className="hover:text-[#f2a93b] transition-colors">TOUR DATES</a> */}
           <a href="#gallery" className="hover:text-[#f2a93b] transition-colors">GALLERY</a>
-          <a href="#epk" className="hover:text-[#f2a93b] transition-colors">EPK</a>
+          <a href="#epk" className="hover:text-[#f2a93b] transition-colors">CONTACT US</a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
@@ -46,8 +46,8 @@ export default function Header({ mobileMenuOpen, setMobileMenuOpen }) {
         <div className="fixed inset-0 top-16 z-40 bg-[#07080a]/95 backdrop-blur-xl md:hidden p-8 flex flex-col gap-6 text-xl font-bold border-t border-white/10">
           <a href="#about" onClick={() => setMobileMenuOpen(false)}>BIO & SOUND</a>
           <a href="#sounds" onClick={() => setMobileMenuOpen(false)}>DISCOGRAPHY</a>
-          <a href="#tour" onClick={() => setMobileMenuOpen(false)}>TOUR DATES</a>
-          <a href="#epk" onClick={() => setMobileMenuOpen(false)}>EPK</a>
+          <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>GALLERY</a>
+          <a href="#epk" onClick={() => setMobileMenuOpen(false)}>CONTACT US</a>
           <a
             href="#booking"
             onClick={() => setMobileMenuOpen(false)}
