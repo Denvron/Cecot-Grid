@@ -63,7 +63,7 @@ const Footer = () => {
         <div>
           <h4 className="text-slate-300 font-bold tracking-widest uppercase mb-4">Company</h4>
           <ul className="space-y-2.5 text-slate-400">
-            <li><a href="#process" className="hover:text-amber-400">About Us</a></li>
+            <li><a href="#about" className="hover:text-amber-400">About Us</a></li>
             <li><a href="#sounds" className="hover:text-amber-400">Audio Vault</a></li>
             <li><a href="#gallery" className="hover:text-amber-400">Visual Archive</a></li>
           </ul>
