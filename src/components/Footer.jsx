@@ -1,10 +1,5 @@
 import React from 'react'
-import CecotLogo from '../assets/images/Logo- black2.jpeg'
-import { FaFacebook } from "react-icons/fa6";
-import { FaInstagramSquare } from "react-icons/fa";
 import { FaSpotify } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa6";
 import instagram from '../assets/images/icons8-instagram-48.png'
 import facebook from '../assets/images/icons8-facebook-48.png'
 import twitter from '../assets/images/icons8-twitter-48.png'
