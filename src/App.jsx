@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from './components/SEO';
 import { TRACKS, TOUR_DATES } from './data/portfolioData';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -61,10 +62,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#07080a] text-slate-100 font-sans selection:bg-[#e06a3b] selection:text-white relative">
+      {/* Primary SEO tags */}
+      <SEO />
       <Header mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
       <main>
         <Hero onPlayLatest={handlePlayLatest} isPlaying={isPlaying && currentTrack?.id === TRACKS[0].id} />
-        <Discography 
+        <Discography
           tracks={TRACKS}
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
